@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.zsolt.hbntutorial.DataProvider" table="movies">
+        <id name="movieID" type="int">
+            <column name="movie_id" precision="5" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="title" type="string">
+            <column name="title" length="30" not-null="true" />
+        </property>
+        <property name="releaseDate" type="date">
+            <column name="release_date" length="7" not-null="false" />
+        </property>
+    </class>
+</hibernate-mapping>
